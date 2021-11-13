@@ -10,7 +10,7 @@ metadata:
     kubernetes.io/ingress.class: alb
 spec:
   rules:
-    - host: "prajaysilwal.com"
+    - host: "foo.com"
       http:
         paths:
           - path: /apple
