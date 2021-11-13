@@ -9,12 +9,18 @@ Steps:
 1) Create two namespaces in your EKS cluster:
   a) kubectl create ns apple
   b) kubectl create ns banana
+  
  Steps 2 and 3 will create apple and banana service and pod for each of those service.
+ 
  2) Run: kubectl apply -f ingress-alb-backend-service-apple.yaml
  3) Run: kubectl apply -f ingress-alb-backend-service-banana.yaml
+ 
  Step 4 and 5 will create ingress resource for apple and banana namespace.It uses path based routing for the ingress resource to go to different service based on different http path.
+ 
  4) Run: kubectl apply -f ingress-resource-alb-apple.yaml
  5) Run: kubectl apply -f ingress-resource-alb-banana.yaml
  
  Verification:
- kubectl get ingress -A should yield single ALB for two different namespaces.
+ kubectl get ingress -A 
+ 
+ This should yield single ALB for two different namespaces.
