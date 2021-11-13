@@ -11,7 +11,7 @@ metadata:
     alb.ingress.kubernetes.io/group.order: "10"
 spec:
   rules:
-    - host: "prajaysilwal.com"
+    - host: "foo.com"
       http:
         paths:
           - path: /banana
